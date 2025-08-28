@@ -1,8 +1,8 @@
 @media screen and (min-width:768px) {
-  /* ===== HEADER ===== */
   /* ===== QUIZZES SECTION ===== */
 
   /* cards list */
+
   .mob-rating-text {
     display: none;
   }
@@ -43,9 +43,12 @@
     }
   }
 
-  /* table list */
+  /* ===== FOOTER ===== */
 
-  /* ===== MOBILE MODERATOR MENU ===== */
+  .footer-list {
+    justify-content: center;
+    gap: 12px;
+  }
 }
 
 @media screen and (min-width:1200px) {
@@ -243,6 +246,11 @@
     max-width: 140px;
   }
 
+  /* ===== FOOTER ===== */
+  .footer {
+    display: none;
+  }
+
   /* ===== MOBILE MODERATOR MENU ===== */
 
   .backdrop {
@@ -341,15 +349,8 @@
   }
 }
 
-
 @media screen and (min-width:1440px) {
-  /* ===== HEADER ===== */
-  /* ===== QUIZZES SECTION ===== */
-
-  /* cards list */
-  /* table list */
-
-  /* ===== MOBILE MODERATOR MENU ===== */
+  /* ===== FOOTER ===== */
 }
 
 @media screen and (min-width:1920px) {
@@ -372,10 +373,6 @@
   .quizzes-filters-item {
     padding: 16px 0;
   }
-
-  /* cards list */
-
-
 
   /* table list */
 
@@ -614,5 +611,5 @@
     }
   }
 
-  /* ===== MOBILE MODERATOR MENU ===== */
+  /* ===== FOOTER ===== */
 }
