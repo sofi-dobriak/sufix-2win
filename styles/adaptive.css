@@ -349,13 +349,9 @@
   }
 }
 
-@media screen and (min-width:1440px) {
-  /* ===== FOOTER ===== */
-}
-
 @media screen and (min-width:1920px) {
-
   /* ===== HEADER ===== */
+
   .desk-nav-list {
     gap: 160px;
   }
@@ -610,6 +606,4 @@
       border-color: #d2d4d8;
     }
   }
-
-  /* ===== FOOTER ===== */
 }

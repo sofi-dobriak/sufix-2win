@@ -5,7 +5,7 @@ const refs = {
   mobileBtnOpen: document.querySelector('.js-modal-moderator-open-button'),
   mobileBtnClosed: document.querySelector('.js-modal-moderator-close-button'),
 
-  // ====== cards table views ======
+  // ====== cards table views buttons and filters ======
   showQuizzesCardsListBtnHeader: document.querySelector(
     '.js-quizzes-table-view-list .js-cards-view-btn'
   ),
@@ -73,7 +73,6 @@ function enableScroll() {
 
 refs.showQuizzesCardsListBtnHeader.addEventListener('click', handleShowCardsView);
 refs.showQuizzesTableBtnHeader.addEventListener('click', handleShowTableView);
-
 refs.showQuizzesCardsListBtnFilters.addEventListener('click', handleShowCardsView);
 refs.showQuizzesTableBtnFilters.addEventListener('click', handleShowTableView);
 
