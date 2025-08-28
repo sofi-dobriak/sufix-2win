@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+  <link rel="icon" type="image/svg+xml" href="./img/favicon.svg" />
   <meta name="description" content="Website for moderating quizzes" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -29,14 +29,14 @@
           <li>
             <button class="burger-button js-modal-moderator-open-button">
               <svg class="burger-icon" width="24" height="24">
-                <use href="./images/icons.svg#icon-menu"></use>
+                <use href="./img/icons.svg#icon-menu"></use>
               </svg>
             </button>
           </li>
           <li>
             <button class="create-button">
               <svg class="create-icon-plus" width="12" height="12">
-                <use href="./images/icons.svg#icon-plus"></use>
+                <use href="./img/icons.svg#icon-plus"></use>
               </svg>
               <span>Create</span>
             </button>
@@ -48,7 +48,7 @@
         <div class="desk-create-logo-container">
           <button class="create-button">
             <svg class="create-icon-plus" width="12" height="12">
-              <use href="./images/icons.svg#icon-plus"></use>
+              <use href="./img/icons.svg#icon-plus"></use>
             </svg>
             <span>Create</span>
           </button>
@@ -71,25 +71,890 @@
         </nav>
 
         <picture>
-          <source
-            srcset="./images/header/desk-moderator-avatar.webp 1x, ./images/header/desk-moderator-avatar@2x.webp 2x"
+          <source srcset="./img/header/desk-moderator-avatar.webp 1x, ./img/header/desk-moderator-avatar@2x.webp 2x"
             media="(min-width: 768px)" type="image/webp">
-          <source srcset="./images/header/desk-moderator-avatar.png 1x, ./images/header/desk-moderator-avatar@2x.png 2x"
+          <source srcset="./img/header/desk-moderator-avatar.png 1x, ./img/header/desk-moderator-avatar@2x.png 2x"
             media="(min-width: 768px)" type="image/png">
 
-          <source srcset="./images/header/mob-moderator-avatar.webp 1x, ./images/header/mob-moderator-avatar@2x.webp 2x"
+          <source srcset="./img/header/mob-moderator-avatar.webp 1x, ./img/header/mob-moderator-avatar@2x.webp 2x"
             media="(max-width: 767px)" type="image/webp">
-          <source srcset="./images/header/mob-moderator-avatar.png 1x, ./images/header/mob-moderator-avatar@2x.png 2x"
+          <source srcset="./img/header/mob-moderator-avatar.png 1x, ./img/header/mob-moderator-avatar@2x.png 2x"
             media="(max-width: 767px)" type="image/png">
 
-          <img class="avatar-images" src="./images/header/mob-moderator-avatar.png" alt="A moderator's avatar"
-            width="32">
+          <img class="avatar-img" src="./img/header/mob-moderator-avatar.png" alt="A moderator's avatar" width="32">
         </picture>
       </div>
     </div>
   </header>
 
-  <main></main>
+  <main>
+    <section class="section quizzes-section">
+      <div class="container">
+        <!-- ===== TITLE AND VIEW BUTTONS ===== -->
+        <div class="quizzes-title-button-container">
+          <h2 class="quizzes-title">Unmoderated quizzes</h2>
+
+          <ul class="quizzes-table-view-list js-quizzes-table-view-list hidden">
+            <li>
+              <button class="quizzes-table-view-button table table-view-btn js-table-view-btn">
+                <svg width="20" height="20" class="quizzes-table-view-icon table-icon">
+                  <use href="./img/icons.svg#icon-table-view"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button class="quizzes-table-view-button cards js-cards-view-btn">
+                <svg width="20" height="20" class="quizzes-table-view-icon cards-icon ">
+                  <use href="./img/icons.svg#icon-grid"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+
+          <button class="quizzes-sort-button">
+            <svg class="quizzes-sort-icon" width="12" height="12">
+              <use href="./img/icons.svg#icon-plus"></use>
+            </svg>
+            <span>Sorted by</span>
+          </button>
+        </div>
+
+        <!-- ===== FILTERS BAR AND VIEW BUTTONS ===== -->
+        <div class="filter-button-views-container js-filter-button-views-container">
+          <ul class="quizzes-filters-list js-cards-filters-list ">
+            <li class="quizzes-filters-item">
+              <p class="quizzes-filters-text">Quiz name</p>
+              <svg width="12" height="12" class="quizzes-filters-icon">
+                <use href="./img/icons.svg#icon-chevron-top"></use>
+              </svg>
+            </li>
+            <li class="quizzes-filters-item">
+              <p class="quizzes-filters-text">Results and rating</p>
+              <svg width="12" height="12" class="quizzes-filters-icon">
+                <use href="./img/icons.svg#icon-chevron-top"></use>
+              </svg>
+            </li>
+            <li class="quizzes-filters-item">
+              <p class="quizzes-filters-text">Created</p>
+              <svg width="12" height="12" class="quizzes-filters-icon">
+                <use href="./img/icons.svg#icon-chevron-top"></use>
+              </svg>
+            </li>
+            <li class="quizzes-filters-item">
+              <p class="quizzes-filters-text">Category</p>
+              <svg width="12" height="12" class="quizzes-filters-icon">
+                <use href="./img/icons.svg#icon-chevron-top"></use>
+              </svg>
+            </li>
+            <li class="quizzes-filters-item">
+              <p class="quizzes-filters-text">Moderation status</p>
+              <svg width="12" height="12" class="quizzes-filters-icon">
+                <use href="./img/icons.svg#icon-chevron-top"></use>
+              </svg>
+            </li>
+            <li class="quizzes-filters-item">
+              <p class="quizzes-filters-text">Moderation date</p>
+              <svg width="12" height="12" class="quizzes-filters-icon">
+                <use href="./img/icons.svg#icon-chevron-top"></use>
+              </svg>
+            </li>
+          </ul>
+
+          <ul class="quizzes-cards-view-list">
+            <li>
+              <button class="quizzes-table-view-button table table-view-btn js-table-view-btn">
+                <svg width="20" height="20" class="quizzes-table-view-icon table-icon">
+                  <use href="./img/icons.svg#icon-table-view"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button class="quizzes-table-view-button cards js-cards-view-btn">
+                <svg width="20" height="20" class="quizzes-table-view-icon cards-icon">
+                  <use href="./img/icons.svg#icon-grid"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ===== CARDS LIST ===== -->
+        <ul class="quizzes-list cards js-quizzes-list-cards">
+          <li class="quizzes-item">
+            <div class="quizzes-item-image-title-container">
+              <picture>
+                <source srcset="./img/table/table-img-1.webp 1x, ./img/table/table-img-1@2x.webp 2x" type="image/webp">
+                <source srcset="./img/table/table-img-1.png 1x, ./img/table/table-img-1@2x.png 2x" type="image/png">
+                <img class="quizzes-item-card-img" src="./img/table/table-img-1.png" alt="A quizzes image" width="92">
+              </picture>
+
+              <a href="#" class="quizzes-item-title">
+                Quiz name. Ready to turn your ambitions into achievements &ndash; Moderation 2
+              </a>
+            </div>
+
+            <div class="quizzes-item-date-rating-container">
+              <div class="quizzes-item-date-container">
+                <svg class="item-date-icon" width="16" height="16">
+                  <use href="./img/icons.svg#icon-calendar-dates"></use>
+                </svg>
+                <p class="item-date-text">31.01.2025</p>
+              </div>
+
+              <div class="quizzes-item-rating-container">
+                <div class="rating-icon-text-container">
+                  <svg class="rating-icon" width="16" height="16">
+                    <use href="./img/icons.svg#icon-bar-chart"></use>
+                  </svg>
+                  <a href="#" class="mob-rating-text">0</a>
+                  <a href="#" class="desk-rating-text">6</a>
+                </div>
+
+                <ul class="rating-stars-list">
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="quizzes-item-text">History / Europe History / Ukraine</p>
+
+            <div class="quizzes-item-moderate-status-moderator-container">
+              <div class="quizzes-item-moderate-status-container">
+                <p class="moderate-status-text">Moderate on 33%</p>
+                <p class="moderate-star-date-text"><span>Started </span>31.01.2025</p>
+              </div>
+
+              <div class="quizzes-item-moderator-img-text-container">
+                <picture class="mob-moderator-picture">
+                  <source
+                    srcset="./img/table/moderator-avatars/moderator-avatar-2.webp 1x, ./img/table/moderator-avatars/moderator-avatar-2@2x.webp"
+                    type="image/webp">
+                  <source
+                    srcset="./img/table/moderator-avatars/moderator-avatar-2.png 1x, ./img/table/moderator-avatars/moderator-avatar-2@2x.png"
+                    type="image/png">
+                  <img src="./img/table/moderator-avatars/moderator-avatar-2.png" alt="An avatar of moderator"
+                    width="24">
+                </picture>
+                <picture class="desk-moderator-picture">
+                  <source
+                    srcset="./img/table/moderator-avatars/moderator-avatar-1.webp 1x, ./img/table/moderator-avatars/moderator-avatar-1@2x.webp"
+                    type="image/webp">
+                  <source
+                    srcset="./img/table/moderator-avatars/moderator-avatar-1.png 1x, ./img/table/moderator-avatars/moderator-avatar-1@2x.png"
+                    type="image/png">
+                  <img src="./img/table/moderator-avatars/moderator-avatar-1.png" alt="An avatar of moderator"
+                    width="24">
+                </picture>
+                <div class="quizzes-item-text-container">
+                  <p>Moderator Name</p>
+                  <p class="moderator-level">Beginner Moderator</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="quizzes-item-start-button-container">
+              <ul class="quizzes-item-icon-list">
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button" type="button">
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-link"></use>
+                    </svg>
+                  </button>
+
+                </li>
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button comment" type="button">
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-comment-text"></use>
+                    </svg>
+                    <span>Comments &amp; rates</span>
+                  </button>
+                </li>
+              </ul>
+
+              <button type="button" class="quizzes-item-start-button">Start moderation</button>
+            </div>
+          </li>
+
+          <li class="quizzes-item">
+            <div class="quizzes-item-image-title-container">
+              <picture>
+                <source srcset="./img/table/table-img-2.webp 1x, ./img/table/table-img-2@2x.webp 2x" type="image/webp">
+                <source srcset="./img/table/table-img-2.png 1x, ./img/table/table-img-2@2x.png 2x" type="image/png">
+                <img class="quizzes-item-card-img" src="./img/table/table-img-2.png" alt="A quizzes image" width="92">
+              </picture>
+
+              <a href="#" class="quizzes-item-title">Quiz name. o make a type specimen book</a>
+            </div>
+
+            <div class="quizzes-item-date-rating-container">
+              <div class="quizzes-item-date-container">
+                <svg class="item-date-icon" width="16" height="16">
+                  <use href="./img/icons.svg#icon-calendar-dates"></use>
+                </svg>
+                <p class="item-date-text">31.01.2025</p>
+              </div>
+
+              <div class="quizzes-item-rating-container">
+                <div class="rating-icon-text-container">
+                  <svg class="rating-icon" width="16" height="16">
+                    <use href="./img/icons.svg#icon-bar-chart"></use>
+                  </svg>
+                  <a href="#" class="mob-rating-text">0</a>
+                  <a href="#" class="desk-rating-text">6</a>
+                </div>
+
+                <ul class="rating-stars-list">
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="quizzes-item-text">History</p>
+
+            <p class="moderate-status-text not-moderated">Not moderated</p>
+
+            <div class="quizzes-item-start-button-container">
+              <ul class="quizzes-item-icon-list">
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button" type="button">
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-link"></use>
+                    </svg>
+                  </button>
+
+                </li>
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button comment disable" type="button" disabled>
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-comment-text"></use>
+                    </svg>
+                    <span>Comments & rates</span>
+                  </button>
+                </li>
+              </ul>
+
+              <button type="button" class="quizzes-item-start-button">Start moderation</button>
+            </div>
+          </li>
+
+          <li class="quizzes-item">
+            <div class="quizzes-item-image-title-container">
+              <picture>
+                <source srcset="./img/table/table-img-3.webp 1x, ./img/table/table-img-3@2x.webp 2x" type="image/webp">
+                <source srcset="./img/table/table-img-3.png 1x, ./img/table/table-img-3@2x.png 2x" type="image/png">
+                <img class="quizzes-item-card-img" src="./img/table/table-img-3.png" alt="A quizzes image" width="92">
+              </picture>
+
+              <a href="#" class="quizzes-item-title">
+                Industry's standard - Moderation 3
+              </a>
+            </div>
+
+            <div class="quizzes-item-date-rating-container">
+              <div class="quizzes-item-date-container">
+                <svg class="item-date-icon" width="16" height="16">
+                  <use href="./img/icons.svg#icon-calendar-dates"></use>
+                </svg>
+                <p class="item-date-text">31.01.2025</p>
+              </div>
+
+              <div class="quizzes-item-rating-container">
+                <div class="rating-icon-text-container">
+                  <svg class="rating-icon" width="16" height="16">
+                    <use href="./img/icons.svg#icon-bar-chart"></use>
+                  </svg>
+                  <a href="#" class="mob-rating-text">0</a>
+                  <a href="#" class="desk-rating-text">6</a>
+                </div>
+
+                <ul class="rating-stars-list">
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="quizzes-item-text">Culture</p>
+
+            <div class="quizzes-item-moderate-status-moderator-container">
+              <div class="quizzes-item-moderate-status-container">
+                <p class="moderate-status-text">Moderate on 66%</p>
+                <p class="moderate-star-date-text"><span>Started </span>31.01.2025</p>
+              </div>
+
+              <div class="quizzes-item-moderator-img-text-container">
+                <picture>
+                  <source
+                    srcset="./img/table/moderator-avatars/moderator-avatar-1.webp 1x, ./img/table/moderator-avatars/moderator-avatar-1@2x.webp"
+                    type="image/webp">
+                  <source
+                    srcset="./img/table/moderator-avatars/moderator-avatar-1.png 1x, ./img/table/moderator-avatars/moderator-avatar-1@2x.png"
+                    type="image/png">
+                  <img src="./img/table/moderator-avatars/moderator-avatar-1.png" alt="An avatar of moderator"
+                    width="24">
+                </picture>
+                <div class="quizzes-item-text-container">
+                  <p class="moderator-name">Devon Hendrix</p>
+                  <p class="moderator-level">Beginner Moderator</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="quizzes-item-start-button-container">
+              <ul class="quizzes-item-icon-list">
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button" type="button">
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-link"></use>
+                    </svg>
+                  </button>
+
+                </li>
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button comment" type="button">
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-comment-text"></use>
+                    </svg>
+                    <span>Comments &amp; rates</span>
+                  </button>
+                </li>
+              </ul>
+
+              <button type="button" class="quizzes-item-start-button">Start moderation</button>
+            </div>
+          </li>
+
+          <li class="quizzes-item">
+            <div class="quizzes-item-image-title-container">
+              <picture>
+                <source srcset="./img/table/table-img-4.webp 1x, ./img/table/table-img-4@2x.webp 2x" type="image/webp">
+                <source srcset="./img/table/table-img-4.png 1x, ./img/table/table-img-4@2x.png 2x" type="image/png">
+                <img class="quizzes-item-card-img" src="./img/table/table-img-4.png" alt="A quizzes image" width="92">
+              </picture>
+
+              <a href="#" class="quizzes-item-title">Quiz name. Lorem ipsum dummy &ndash; Moderation 2</a>
+            </div>
+
+            <div class="quizzes-item-date-rating-container">
+              <div class="quizzes-item-date-container">
+                <svg class="item-date-icon" width="16" height="16">
+                  <use href="./img/icons.svg#icon-calendar-dates"></use>
+                </svg>
+                <p class="item-date-text">31.01.2025</p>
+              </div>
+
+              <div class="quizzes-item-rating-container">
+                <div class="rating-icon-text-container">
+                  <svg class="rating-icon" width="16" height="16">
+                    <use href="./img/icons.svg#icon-bar-chart"></use>
+                  </svg>
+                  <a href="#" class="mob-rating-text">0</a>
+                  <a href="#" class="desk-rating-text">6</a>
+                </div>
+
+                <ul class="rating-stars-list">
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="quizzes-item-text">Science</p>
+
+            <p class="moderate-status-text not-moderated">Not moderated</p>
+
+            <div class="quizzes-item-start-button-container">
+              <ul class="quizzes-item-icon-list">
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button" type="button">
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-link"></use>
+                    </svg>
+                  </button>
+
+                </li>
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button comment disable" type="button" disabled>
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-comment-text"></use>
+                    </svg>
+                    <span>Comments & rates</span>
+                  </button>
+                </li>
+              </ul>
+
+              <button type="button" class="quizzes-item-start-button">Start moderation</button>
+            </div>
+          </li>
+
+          <li class="quizzes-item">
+            <div class="quizzes-item-image-title-container">
+              <picture>
+                <source srcset="./img/table/table-img-5.webp 1x, ./img/table/table-img-5@2x.webp 2x" type="image/webp">
+                <source srcset="./img/table/table-img-5.png 1x, ./img/table/table-img-5@2x.png 2x" type="image/png">
+                <img class="quizzes-item-card-img" src="./img/table/table-img-5.png" alt="A quizzes image" width="92">
+              </picture>
+
+              <a href="#" class="quizzes-item-title">Quiz name. Lorem ipsum dummy &ndash; Moderation 2</a>
+            </div>
+
+            <div class="quizzes-item-date-rating-container">
+              <div class="quizzes-item-date-container">
+                <svg class="item-date-icon" width="16" height="16">
+                  <use href="./img/icons.svg#icon-calendar-dates"></use>
+                </svg>
+                <p class="item-date-text">31.01.2025</p>
+              </div>
+
+              <div class="quizzes-item-rating-container">
+                <div class="rating-icon-text-container">
+                  <svg class="rating-icon" width="16" height="16">
+                    <use href="./img/icons.svg#icon-bar-chart"></use>
+                  </svg>
+                  <a href="#" class="mob-rating-text">0</a>
+                  <a href="#" class="desk-rating-text">6</a>
+                </div>
+
+                <ul class="rating-stars-list">
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="quizzes-item-text">History / Wold History</p>
+
+            <p class="moderate-status-text not-moderated">Not moderated</p>
+
+            <div class="quizzes-item-start-button-container">
+              <ul class="quizzes-item-icon-list">
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button" type="button">
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-link"></use>
+                    </svg>
+                  </button>
+
+                </li>
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button comment disable" type="button" disabled>
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-comment-text"></use>
+                    </svg>
+                    <span>Comments & rates</span>
+                  </button>
+                </li>
+              </ul>
+
+              <button type="button" class="quizzes-item-start-button">Start moderation</button>
+            </div>
+          </li>
+
+          <li class="quizzes-item">
+            <div class="quizzes-item-image-title-container">
+              <picture>
+                <source srcset="./img/table/table-img-6.webp 1x, ./img/table/table-img-6@2x.webp 2x" type="image/webp">
+                <source srcset="./img/table/table-img-6.png 1x, ./img/table/table-img-6@2x.png 2x" type="image/png">
+                <img class="quizzes-item-card-img" src="./img/table/table-img-6.png" alt="A quizzes image" width="92">
+              </picture>
+
+              <a href="#" class="quizzes-item-title">Quiz name. Lorem ipsum dummy &ndash; Moderation 2</a>
+            </div>
+
+            <div class="quizzes-item-date-rating-container">
+              <div class="quizzes-item-date-container">
+                <svg class="item-date-icon" width="16" height="16">
+                  <use href="./img/icons.svg#icon-calendar-dates"></use>
+                </svg>
+                <p class="item-date-text">31.01.2025</p>
+              </div>
+
+              <div class="quizzes-item-rating-container">
+                <div class="rating-icon-text-container">
+                  <svg class="rating-icon" width="16" height="16">
+                    <use href="./img/icons.svg#icon-bar-chart"></use>
+                  </svg>
+                  <a href="#" class="mob-rating-text">0</a>
+                  <a href="#" class="desk-rating-text">6</a>
+                </div>
+
+                <ul class="rating-stars-list">
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="quizzes-item-text">Politics</p>
+
+            <p class="moderate-status-text not-moderated">Not moderated</p>
+
+            <div class="quizzes-item-start-button-container">
+              <ul class="quizzes-item-icon-list">
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button" type="button">
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-link"></use>
+                    </svg>
+                  </button>
+
+                </li>
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button comment disable" type="button" disabled>
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-comment-text"></use>
+                    </svg>
+                    <span>Comments & rates</span>
+                  </button>
+                </li>
+              </ul>
+
+              <button type="button" class="quizzes-item-start-button">Start moderation</button>
+            </div>
+          </li>
+
+          <li class="quizzes-item">
+            <div class="quizzes-item-image-title-container">
+              <picture>
+                <source srcset="./img/table/table-img-7.webp 1x, ./img/table/table-img-7@2x.webp 2x" type="image/webp">
+                <source srcset="./img/table/table-img-7.png 1x, ./img/table/table-img-7@2x.png 2x" type="image/png">
+                <img class="quizzes-item-card-img" src="./img/table/table-img-7.png" alt="A quizzes image" width="92">
+              </picture>
+
+              <a href="#" class="quizzes-item-title">
+                Quiz name. Lorem ipsum dummy - Moderation 2
+              </a>
+            </div>
+
+            <div class="quizzes-item-date-rating-container">
+              <div class="quizzes-item-date-container">
+                <svg class="item-date-icon" width="16" height="16">
+                  <use href="./img/icons.svg#icon-calendar-dates"></use>
+                </svg>
+                <p class="item-date-text">31.01.2025</p>
+              </div>
+
+              <div class="quizzes-item-rating-container">
+                <div class="rating-icon-text-container">
+                  <svg class="rating-icon" width="16" height="16">
+                    <use href="./img/icons.svg#icon-bar-chart"></use>
+                  </svg>
+                  <a href="#" class="mob-rating-text">0</a>
+                  <a href="#" class="desk-rating-text">6</a>
+                </div>
+
+                <ul class="rating-stars-list">
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="quizzes-item-text">Culture</p>
+
+            <div class="quizzes-item-moderate-status-moderator-container">
+              <div class="quizzes-item-moderate-status-container">
+                <p class="moderate-status-text">Moderate on 66%</p>
+                <p class="moderate-star-date-text"><span>Started </span>31.01.2025</p>
+              </div>
+
+              <div class="quizzes-item-moderator-img-text-container">
+                <picture>
+                  <source
+                    srcset="./img/table/moderator-avatars/moderator-avatar-1.webp 1x, ./img/table/moderator-avatars/moderator-avatar-1@2x.webp"
+                    type="image/webp">
+                  <source
+                    srcset="./img/table/moderator-avatars/moderator-avatar-1.png 1x, ./img/table/moderator-avatars/moderator-avatar-1@2x.png"
+                    type="image/png">
+                  <img src="./img/table/moderator-avatars/moderator-avatar-1.png" alt="An avatar of moderator"
+                    width="24">
+                </picture>
+                <div class="quizzes-item-text-container">
+                  <p class="moderator-name">Devon Hendrix</p>
+                  <p class="moderator-level">Beginner Moderator</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="quizzes-item-start-button-container">
+              <ul class="quizzes-item-icon-list">
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button" type="button">
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-link"></use>
+                    </svg>
+                  </button>
+
+                </li>
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button comment" type="button">
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-comment-text"></use>
+                    </svg>
+                    <span>Comments &amp; rates</span>
+                  </button>
+                </li>
+              </ul>
+
+              <button type="button" class="quizzes-item-start-button">Start moderation</button>
+            </div>
+          </li>
+
+          <li class="quizzes-item">
+            <div class="quizzes-item-image-title-container">
+              <picture>
+                <source srcset="./img/table/table-img-8.webp 1x, ./img/table/table-img-8@2x.webp 2x" type="image/webp">
+                <source srcset="./img/table/table-img-8.png 1x, ./img/table/table-img-8@2x.png 2x" type="image/png">
+                <img class="quizzes-item-card-img" src="./img/table/table-img-8.png" alt="A quizzes image" width="92">
+              </picture>
+
+              <a href="#" class="quizzes-item-title">Quiz name. Lorem ipsum dummy &ndash; Moderation 2</a>
+            </div>
+
+            <div class="quizzes-item-date-rating-container">
+              <div class="quizzes-item-date-container">
+                <svg class="item-date-icon" width="16" height="16">
+                  <use href="./img/icons.svg#icon-calendar-dates"></use>
+                </svg>
+                <p class="item-date-text">31.01.2025</p>
+              </div>
+
+              <div class="quizzes-item-rating-container">
+                <div class="rating-icon-text-container">
+                  <svg class="rating-icon" width="16" height="16">
+                    <use href="./img/icons.svg#icon-bar-chart"></use>
+                  </svg>
+                  <a href="#" class="mob-rating-text">0</a>
+                  <a href="#" class="desk-rating-text">6</a>
+                </div>
+
+                <ul class="rating-stars-list">
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                  <li class="rating-stars-item">
+                    <svg class="rating-star-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-star"></use>
+                    </svg>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="quizzes-item-text">Science</p>
+
+            <p class="moderate-status-text not-moderated">Not moderated</p>
+
+            <div class="quizzes-item-start-button-container">
+              <ul class="quizzes-item-icon-list">
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button" type="button">
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-link"></use>
+                    </svg>
+                  </button>
+
+                </li>
+                <li class="quizzes-item-icon-item">
+                  <button class="quizzes-item-icon-button comment disable" type="button" disabled>
+                    <svg class="quizzes-item-icon" width="16" height="16">
+                      <use href="./img/icons.svg#icon-comment-text"></use>
+                    </svg>
+                    <span>Comments & rates</span>
+                  </button>
+                </li>
+              </ul>
+
+              <button type="button" class="quizzes-item-start-button">Start moderation</button>
+            </div>
+          </li>
+        </ul>
+
+        <!-- ===== TABLE LIST ===== -->
+      </div>
+    </section>
+  </main>
 
   <script type="module" src="./index.js"></script>
 </body>
