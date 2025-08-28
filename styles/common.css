@@ -1,0 +1,119 @@
+/* ===== FONTS ===== */
+
+@font-face {
+  font-display: swap;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/arial-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Arial';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./fonts/arial-bold.woff2') format('woff2');
+}
+
+
+/* ===== BASE STYLES ===== */
+
+:root {
+  /* font */
+  --font-family: 'Arial', sans-serif;
+  --font-weight: 400;
+  --font-size: 14px;
+  --line-height: 1.3;
+
+  /* background colors */
+  --main-bg-color: #1e1e3e;
+  --secondary-bg-color: #fff;
+  --modal-backdrop-color: rgba(30, 30, 62, 0.8);
+  --modal-bg-color: #2e2e54;
+
+  /* text colors */
+  --main-text-color: #2e2e54;
+  --secondary-text-color: #69748c;
+  --tertiary-text-color: #fff;
+  --additional-text-color: #d13980;
+
+  /* hover/focus colors */
+  --main-color-hover: #d13980;
+  --secondary-color-hover: #2e2e54;
+
+  /* buttons */
+  --main-button-bg-color: #d13980;
+  --main-button-border-color: #d13980;
+  --main-button-text-color: #fff;
+  --secondary-button-bg-hover: rgba(209, 57, 128, 0.1);
+
+  /* border */
+  --main-border-color: #d2d4d8;
+
+  /* icons */
+  --main-icon-color: #69748c;
+  --secondary-icon-color: #d2d4d8;
+  --tertiary-icon-color: #2e2e54;
+  --additional-icon-color: #fff;
+  --accent-icon-color: #d13980;
+
+  /* moderate status */
+  --moderate-text-color: #d08939;
+  --moderate-bg-color: rgba(208, 137, 57, 0.25);
+  --not-moderate-text-color: #3b7dc9;
+  --not-moderate-bg-color: rgba(59, 125, 201, 0.25);
+  --moderated-text-color: #30a56e;
+  --moderated-bg-color: rgba(48, 165, 110, 0.25);
+
+  /* link */
+  --main-link-color: #2e2e54;
+
+  /* logo */
+  --main-logo-color: #d13980;
+
+  /* transition */
+  --transition: 250ms ease;
+
+  /* table */
+  --odd-row-bg-color: #f5f6f7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  font-weight: var(--font-weight);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  background-color: var(--bg-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.section {
+  padding: 20px 0;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}

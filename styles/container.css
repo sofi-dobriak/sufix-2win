@@ -1,0 +1,33 @@
+/* ===== CONTAINER ===== */
+
+.container {
+  min-width: 320px;
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+}
+
+@media only screen and (min-width: 1920px) {
+  .container {
+    max-width: 1920px;
+    padding: 0 24px;
+  }
+}

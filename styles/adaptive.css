@@ -1,0 +1,51 @@
+/* ===== HEADER ===== */
+
+@media screen and (min-width:1200px) {
+  .mob-header-buttons {
+    display: none;
+  }
+
+  .desk-create-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .mob-logo {
+    display: none;
+  }
+
+  .desk-logo {
+    display: block;
+  }
+
+  .desk-nav {
+    display: flex;
+  }
+
+  .desk-nav-list {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .desk-nav-link {
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    color: var(--additional-text-color);
+    padding: 18px 0;
+    transition: color var(--transition);
+  }
+
+  .desk-nav-link:hover,
+  .desk-nav-link:focus {
+    color: var(--secondary-color-hover);
+  }
+}
+
+@media screen and (min-width:1920px) {
+  .desk-nav-list {
+    gap: 160px;
+  }
+}

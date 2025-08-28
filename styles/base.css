@@ -1,0 +1,86 @@
+/* ===== HEADER ===== */
+
+.header {
+  background-color: var(--secondary-bg-color);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 300;
+}
+
+.header-content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mob-header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 12px 0;
+}
+
+.desk-create-logo-container {
+  display: none;
+}
+
+.burger-icon {
+  fill: var(--tertiary-icon-color);
+  transition: fill var(--transition);
+}
+
+.burger-button:hover .burger-icon,
+.burger-button:focus .burger-icon {
+  fill: var(--main-color-hover);
+}
+
+.create-button {
+  gap: 8px;
+  color: var(--main-button-text-color);
+  background-color: var(--main-button-bg-color);
+  border-color: var(--main-button-bg-color);
+  border-radius: 6px;
+  padding: 10px 12px;
+  transition: all var(--transition);
+}
+
+.create-button:hover,
+.create-button:focus {
+  background-color: transparent;
+  color: var(--main-color-hover);
+}
+
+.create-icon-plus {
+  fill: var(--additional-icon-color);
+  transition: fill var(--transition);
+}
+
+.create-button:hover .create-icon-plus,
+.create-button:focus .create-icon-plus {
+  fill: var(--main-color-hover);
+}
+
+.mob-logo,
+.desk-logo {
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--main-logo-color);
+  padding: 10px 0;
+  transition: color var(--transition);
+}
+
+.mob-logo:hover,
+.mob-logo:focus,
+.desk-logo:hover,
+.desk-logo:focus {
+  color: var(--secondary-color-hover);
+}
+
+.desk-logo {
+  display: none;
+}
+
+.desk-nav {
+  display: none;
+}

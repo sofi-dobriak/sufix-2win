@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
+  <meta name="description" content="Website for moderating quizzes" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>2WIN</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet" href="./styles/reset.css" />
+  <link rel="stylesheet" href="./styles/common.css" />
+  <link rel="stylesheet" href="./styles/container.css" />
+
+  <link rel="stylesheet" href="./styles/base.css" />
+  <link rel="stylesheet" href="./styles/adaptive.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header-content-container">
+        <ul class="mob-header-buttons">
+          <li>
+            <button class="burger-button js-modal-moderator-open-button">
+              <svg class="burger-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-menu"></use>
+              </svg>
+            </button>
+          </li>
+          <li>
+            <button class="create-button">
+              <svg class="create-icon-plus" width="12" height="12">
+                <use href="./images/icons.svg#icon-plus"></use>
+              </svg>
+              <span>Create</span>
+            </button>
+          </li>
+        </ul>
+
+        <a href="#" class="mob-logo">2WIN</a>
+
+        <div class="desk-create-logo-container">
+          <button class="create-button">
+            <svg class="create-icon-plus" width="12" height="12">
+              <use href="./images/icons.svg#icon-plus"></use>
+            </svg>
+            <span>Create</span>
+          </button>
+
+          <a href="#" class="desk-logo">2WIN</a>
+        </div>
+
+        <nav class="desk-nav">
+          <ul class="desk-nav-list">
+            <li class="desk-nav-item">
+              <a href="#" class="desk-nav-link">Home</a>
+            </li>
+            <li class="desk-nav-item">
+              <a href="#" class="desk-nav-link">Materials for Quiz</a>
+            </li>
+            <li class="desk-nav-item">
+              <a href="#" class="desk-nav-link">Feedback</a>
+            </li>
+          </ul>
+        </nav>
+
+        <picture>
+          <source
+            srcset="./images/header/desk-moderator-avatar.webp 1x, ./images/header/desk-moderator-avatar@2x.webp 2x"
+            media="(min-width: 768px)" type="image/webp">
+          <source srcset="./images/header/desk-moderator-avatar.png 1x, ./images/header/desk-moderator-avatar@2x.png 2x"
+            media="(min-width: 768px)" type="image/png">
+
+          <source srcset="./images/header/mob-moderator-avatar.webp 1x, ./images/header/mob-moderator-avatar@2x.webp 2x"
+            media="(max-width: 767px)" type="image/webp">
+          <source srcset="./images/header/mob-moderator-avatar.png 1x, ./images/header/mob-moderator-avatar@2x.png 2x"
+            media="(max-width: 767px)" type="image/png">
+
+          <img class="avatar-images" src="./images/header/mob-moderator-avatar.png" alt="A moderator's avatar"
+            width="32">
+        </picture>
+      </div>
+    </div>
+  </header>
+
+  <main></main>
+
+  <script type="module" src="./index.js"></script>
+</body>
+
+</html>
