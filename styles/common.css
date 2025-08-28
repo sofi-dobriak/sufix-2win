@@ -79,10 +79,6 @@
   --odd-row-bg-color: #f5f6f7;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   font-family: 'Arial', sans-serif;
   font-weight: var(--font-weight);
@@ -103,10 +99,6 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.section {
-  padding: 20px 0;
 }
 
 button {
