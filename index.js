@@ -29,45 +29,45 @@ const refs = {
 };
 
 // ====== MOBILE MENU ======
-// refs.mobileBtnOpen.addEventListener('click', handleOpenMobileMenu);
-// refs.mobileBtnClosed.addEventListener('click', handleCloseMobileMenu);
-// refs.mobileMenuBackdrop.addEventListener('click', handleBackdropClick);
+refs.mobileBtnOpen.addEventListener('click', handleOpenMobileMenu);
+refs.mobileBtnClosed.addEventListener('click', handleCloseMobileMenu);
+refs.mobileMenuBackdrop.addEventListener('click', handleBackdropClick);
 
-// function handleOpenMobileMenu() {
-//   refs.mobileMenuBackdrop.classList.add('is-open');
-//   refs.mobileMenu.classList.add('is-open');
-//   disableScroll();
+function handleOpenMobileMenu() {
+  refs.mobileMenuBackdrop.classList.add('is-open');
+  refs.mobileMenu.classList.add('is-open');
+  disableScroll();
 
-//   window.addEventListener('keydown', handleKeyDown);
-// }
+  window.addEventListener('keydown', handleKeyDown);
+}
 
-// function handleCloseMobileMenu(event) {
-//   refs.mobileMenuBackdrop.classList.remove('is-open');
-//   refs.mobileMenu.classList.remove('is-open');
-//   enableScroll();
+function handleCloseMobileMenu(event) {
+  refs.mobileMenuBackdrop.classList.remove('is-open');
+  refs.mobileMenu.classList.remove('is-open');
+  enableScroll();
 
-//   window.removeEventListener('keydown', handleKeyDown);
-// }
+  window.removeEventListener('keydown', handleKeyDown);
+}
 
-// function handleBackdropClick(event) {
-//   if (event.target === event.currentTarget) {
-//     handleCloseMobileMenu();
-//   }
-// }
+function handleBackdropClick(event) {
+  if (event.target === event.currentTarget) {
+    handleCloseMobileMenu();
+  }
+}
 
-// function handleKeyDown(event) {
-//   if (event.key === 'Escape') {
-//     handleCloseMobileMenu();
-//   }
-// }
+function handleKeyDown(event) {
+  if (event.key === 'Escape') {
+    handleCloseMobileMenu();
+  }
+}
 
-// function disableScroll() {
-//   document.body.style.overflow = 'hidden';
-// }
+function disableScroll() {
+  document.body.style.overflow = 'hidden';
+}
 
-// function enableScroll() {
-//   document.body.style.overflow = '';
-// }
+function enableScroll() {
+  document.body.style.overflow = '';
+}
 
 // ====== CARDS TABLE VIEW ======
 

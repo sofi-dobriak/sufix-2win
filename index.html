@@ -71,7 +71,7 @@
           </ul>
         </nav>
 
-        <img class="avatar-img" src="./img/header/mob-moderator-avatar.png" alt="A moderator's avatar" width="32">
+        <img class="avatar-img" src="./img/header/mob-moderator-avatar@2x.png" alt="A moderator's avatar" width="32">
       </div>
     </div>
   </header>
@@ -2044,6 +2044,123 @@
       </div>
     </section>
   </main>
+
+  <!-- ===== MOBILE MODERATOR MENU ===== -->
+  <div class="backdrop js-modal-moderator-backdrop">
+    <aside class="modal-moderator-menu js-modal-moderator-menu">
+      <button type="button" class="modal-moderator-close-button js-modal-moderator-close-button">
+        <svg width="24" height="24" class="modal-moderator-close-icon">
+          <use href="./img/icons.svg#icon-close"></use>
+        </svg>
+      </button>
+
+      <div class="aside-list-moderator-container">
+        <ul class="aside-list">
+          <li>
+            <a href="#" class="aside-item-link">
+              <svg class="aside-item-link-icon" width="16" height="16">
+                <use href="./img/icons.svg#icon-quiz"></use>
+              </svg>
+              <span>My quizzes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="aside-item-link">
+              <svg class="aside-item-link-icon" width="16" height="16">
+                <use href="./img/icons.svg#icon-verified"></use>
+              </svg>
+              <span>Completed quizzes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="aside-item-link active">
+              <svg class="aside-item-link-icon" width="16" height="16">
+                <use href="./img/icons.svg#icon-question"></use>
+              </svg>
+              <span>Unmoderated quizzes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="aside-item-link">
+              <svg class="aside-item-link-icon" width="16" height="16">
+                <use href="./img/icons.svg#icon-folder-opened"></use>
+              </svg>
+              <span>Manage quiz folders</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="aside-item-link">
+              <svg class="aside-item-link-icon" width="16" height="16">
+                <use href="./img/icons.svg#icon-trash"></use>
+              </svg>
+              <span>Trash</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="aside-item-link profile">
+              <svg class="aside-item-link-icon" width="16" height="16">
+                <use href="./img/icons.svg#icon-user"></use>
+              </svg>
+              <span>My profile</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="aside-item-link exit">
+              <svg class="aside-item-link-icon" width="16" height="16">
+                <use href="./img/icons.svg#icon-share-arrow-right"></use>
+              </svg>
+              <span class="aside-button-text">Exit</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="aside-moderator-rating-container">
+          <div class="aside-moderator-container">
+            <picture>
+              <source srcset="./img/aside/moderator.webp 1x, ./img/aside/moderator@2x.webp 2x" type="image/webp">
+              <source srcset="./img/aside/moderator.png 1x, ./img/aside/moderator@2x.png 2x" type="image/png">
+              <img class="aside-moderator-image" src="./img/aside/moderator.png" alt="A moderator's avatar" width="32">
+            </picture>
+            <div class="aside-moderator-text-container">
+              <p class="aside-moderator-name">User Name</p>
+              <p class="aside-moderator-position">Moderator </p>
+            </div>
+          </div>
+
+          <ul class="aside-rating-list">
+            <li class="aside-rating-item">
+              <svg class="aside-author-rating-icon" width="12" height="12">
+                <use href="./img/icons.svg#icon-pencil-create"></use>
+              </svg>
+              <p class="aside-author-rating-title">Author rating</p>
+              <p class="aside-author-rating-text">1190 points</p>
+            </li>
+            <li class="aside-rating-item">
+              <svg class="aside-user-rating-icon" width="12" height="12">
+                <use href="./img/icons.svg#icon-thumbs-up"></use>
+              </svg>
+              <p class="aside-user-rating-title">User rating</p>
+              <p class="aside-user-rating-text">353 points, 31.87%</p>
+            </li>
+          </ul>
+
+          <button type="button" class="minimize-button">
+            <svg width="16" height="16" class="minimize-icon">
+              <use href="./img/icons.svg#icon-chevron-left"></use>
+            </svg>
+            <span>Minimize</span>
+          </button>
+
+          <a href="#" class="aside-item-link desk-exit">
+            <svg class="aside-item-link-icon" width="16" height="16">
+              <use href="./img/icons.svg#icon-share-arrow-right"></use>
+            </svg>
+            <span class="aside-button-text">Exit</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
 
   <script type="module" src="./index.js"></script>
 </body>
