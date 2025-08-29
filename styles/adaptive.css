@@ -93,6 +93,11 @@
     }
   }
 
+  .avatar-img {
+    width: 48px;
+    height: 48px;
+  }
+
   /* ===== QUIZZES SECTION ===== */
 
   .quizzes-section {
@@ -433,7 +438,7 @@
 
   .quizzes-list-table .quizzes-filters-item:nth-child(8),
   td:nth-child(8) {
-    width: 144px;
+    width: 156px;
     padding-right: 8px;
   }
 
